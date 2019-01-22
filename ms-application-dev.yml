@@ -5,4 +5,15 @@
 #     url: jdbc:mysql://localhost:3306/shop?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
 #     password: 54943364
 server:
-  port: 8089
+  port: 8761
+
+spring:
+  profiles: peer2
+  
+eureka:
+  instance: 
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8760/eureka/
+
